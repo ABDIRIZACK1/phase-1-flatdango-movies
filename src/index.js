@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
               const movieData = await response.json();
         
-              // Update DOM with movie details
+              // Updating DOM with movie details
               const posterImg = document.getElementById('poster');
               posterImg.src = movieData.poster;
               posterImg.alt = movieData.title;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           };
         
-          // Function to fetch all movies and populate the films menu
+          // Function to fetch all movies and populate the films of my menu
           const fetchAllMovies = async () => {
             try {
               const response = await fetch(`${baseURL}/films`);
@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           };
         
-          // Call fetchAllMovies when the page loads
+          // Calling fetchAllMovies when the page loads
           fetchAllMovies();
         
-          // Add event listener for Delete Film button (assuming there's a delete button in the film item)
+          // adding to event listener for Delete Film button (assuming there's a delete button in the film item)
           const filmsList = document.getElementById('films');
           filmsList.addEventListener('click', async (event) => {
             if (event.target.classList.contains('delete-btn')) {
